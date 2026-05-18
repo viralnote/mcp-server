@@ -13,7 +13,7 @@
  *       "viralnote": {
  *         "command": "npx",
  *         "args": ["-y", "@viralnote/mcp-server"],
- *         "env": { "VIRALNOTE_API_KEY": "vn_live_..." }
+ *         "env": { "VIRALNOTE_API_KEY": "vnd_..." }
  *       }
  *     }
  *   }

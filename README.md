@@ -17,7 +17,7 @@ Add to your MCP config (`~/Library/Application Support/Claude/claude_desktop_con
       "command": "npx",
       "args": ["-y", "@viralnote/mcp-server"],
       "env": {
-        "VIRALNOTE_API_KEY": "vn_live_..."
+        "VIRALNOTE_API_KEY": "vnd_..."
       }
     }
   }
@@ -39,7 +39,7 @@ Then reference `viralnote-mcp` directly in your MCP config:
   "mcpServers": {
     "viralnote": {
       "command": "viralnote-mcp",
-      "env": { "VIRALNOTE_API_KEY": "vn_live_..." }
+      "env": { "VIRALNOTE_API_KEY": "vnd_..." }
     }
   }
 }
@@ -94,13 +94,13 @@ git clone https://github.com/viralnote/mcp-server
 cd mcp-server
 npm install
 npm run build
-VIRALNOTE_API_KEY=vn_live_... npm start
+VIRALNOTE_API_KEY=vnd_... npm start
 ```
 
 For local iteration without rebuilding:
 
 ```bash
-VIRALNOTE_API_KEY=vn_live_... npm run dev
+VIRALNOTE_API_KEY=vnd_... npm run dev
 ```
 
 ## License
