@@ -1,0 +1,46 @@
+{
+  "name": "@viralnote/mcp-server",
+  "version": "0.2.0",
+  "description": "Model Context Protocol server for the ViralNote social media API. Lets Claude Desktop, Claude Code, and Cursor schedule posts, manage media, and read analytics through native MCP tool calls.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "viralnote-mcp": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "viralnote",
+    "social-media",
+    "claude",
+    "cursor"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viralnote/mcp-server"
+  },
+  "homepage": "https://viralnote.app/developers/mcp"
+}
