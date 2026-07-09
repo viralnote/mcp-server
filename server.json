@@ -1,0 +1,45 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.viralnote/mcp-server",
+  "title": "ViralNote",
+  "description": "AI video clipping + multi-platform social scheduling (TikTok, Instagram Reels, YouTube Shorts, X, Threads, LinkedIn) as 15 native MCP tools: list/create/update/publish posts, import media, manage social accounts, read analytics and delivery results, and subscribe to webhooks.",
+  "websiteUrl": "https://www.viralnote.app/mcp",
+  "repository": {
+    "url": "https://github.com/viralnote/mcp-server",
+    "source": "github"
+  },
+  "version": "0.2.2",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@viralnote/mcp-server",
+      "version": "0.2.2",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "VIRALNOTE_API_KEY",
+          "description": "ViralNote API key (create one at https://dashboard.viralnote.app/developers/auth). Format: vnd_...",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://dashboard.viralnote.app/api/mcp/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer API key from https://dashboard.viralnote.app/developers/auth. Format: Bearer vnd_...",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
