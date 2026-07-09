@@ -1,0 +1,15 @@
+{
+  "name": "viralnote",
+  "displayName": "ViralNote",
+  "version": "0.2.3",
+  "description": "Schedule, publish, and analyze social posts across TikTok, Instagram, YouTube, X, Threads, LinkedIn, and more via the ViralNote API.",
+  "author": {
+    "name": "ViralNote",
+    "url": "https://www.viralnote.app"
+  },
+  "homepage": "https://www.viralnote.app/mcp",
+  "repository": "https://github.com/viralnote/mcp-server",
+  "license": "MIT",
+  "keywords": ["mcp", "social-media", "scheduling", "analytics", "viralnote"],
+  "mcpServers": "./.mcp.json"
+}

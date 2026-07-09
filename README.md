@@ -28,6 +28,8 @@ Add to your MCP config (`~/Library/Application Support/Claude/claude_desktop_con
 
 Restart your MCP host. The ViralNote tools will be available immediately.
 
+This repo includes a root [`.mcp.json`](./.mcp.json) ([Open Plugins](https://open-plugins.com) standard) so tools like [Cursor Directory](https://cursor.directory/plugins/new) can auto-detect the MCP server from the GitHub URL.
+
 ### Local install
 
 ```bash
