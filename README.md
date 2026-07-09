@@ -1,6 +1,6 @@
 # @viralnote/mcp-server
 
-[![ViralNote MCP server](https://glama.ai/mcp/servers/viralnote/mcp-server/badge)](https://glama.ai/mcp/servers/viralnote/mcp-server)
+[![ViralNote MCP server](https://glama.ai/mcp/servers/viralnote/mcp-server/badges/card.svg)](https://glama.ai/mcp/servers/viralnote/mcp-server)
 
 A [Model Context Protocol](https://modelcontextprotocol.io) server for the **ViralNote** social media API.
 
