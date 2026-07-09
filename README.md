@@ -1,5 +1,7 @@
 # @viralnote/mcp-server
 
+[![ViralNote MCP server](https://glama.ai/mcp/servers/viralnote/mcp-server/badge)](https://glama.ai/mcp/servers/viralnote/mcp-server)
+
 A [Model Context Protocol](https://modelcontextprotocol.io) server for the **ViralNote** social media API.
 
 Plug it into Claude Desktop, Claude Code, Cursor, or any other MCP-aware host and your agent can schedule posts, manage media, and read analytics across X, Instagram, Facebook, TikTok, LinkedIn, YouTube, Pinterest, Bluesky, Threads, and Reddit — as native MCP tool calls. No glue code.
