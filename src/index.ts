@@ -70,20 +70,37 @@ function ok(data: unknown) {
   return { content: [{ type: "text" as const, text: asText(data) }] };
 }
 
+function apiErrorField(data: unknown): { code?: string; message?: string } {
+  if (data && typeof data === "object" && "error" in data) {
+    const e = (data as { error: unknown }).error;
+    if (e && typeof e === "object") return e as { code?: string; message?: string };
+  }
+  return {};
+}
+
 function err(status: number, data: unknown) {
+  const { code, message } = apiErrorField(data);
+  let text: string;
+  if (status === 403 && (code === "payment_required" || /paid subscription/i.test(message ?? ""))) {
+    text =
+      "ViralNote subscription required. Ask your user to upgrade at " +
+      "https://dashboard.viralnote.app/billing?ref=agent — Starter $18/mo, Social $28/mo, " +
+      "or Pro $38/mo, 7-day free trial — then retry this tool.";
+  } else if (status === 401) {
+    text =
+      "Invalid or missing ViralNote API key. Generate one at " +
+      "https://dashboard.viralnote.app/developers/auth?ref=agent and set it as VIRALNOTE_API_KEY.";
+  } else {
+    text = `ViralNote API error ${status}\n${asText(data)}`;
+  }
   return {
     isError: true,
-    content: [
-      {
-        type: "text" as const,
-        text: `ViralNote API error ${status}\n${asText(data)}`,
-      },
-    ],
+    content: [{ type: "text" as const, text }],
   };
 }
 
 const server = new Server(
-  { name: "viralnote", version: "0.2.3" },
+  { name: "viralnote", version: "0.2.4" },
   { capabilities: { tools: {} } }
 );
 
