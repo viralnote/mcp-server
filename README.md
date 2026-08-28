@@ -30,6 +30,18 @@ Restart your MCP host. The ViralNote tools will be available immediately.
 
 This repo includes a root [`.mcp.json`](./.mcp.json) ([Open Plugins](https://open-plugins.com) standard) so tools like [Cursor Directory](https://cursor.directory/plugins/new) can auto-detect the MCP server from the GitHub URL.
 
+#### Cursor Marketplace
+
+Once the plugin is published on Cursor Marketplace, you can install it directly from Cursor:
+
+1. Open Cursor and go to Settings → Plugins
+2. Search for "ViralNote" in the Marketplace
+3. Click Install
+4. In Plugins → Configure, set your `VIRALNOTE_API_KEY`
+5. Get your API key from [dashboard.viralnote.app](https://dashboard.viralnote.app) or [viralnote.app/developers/auth](https://viralnote.app/developers/auth)
+
+The ViralNote tools will be immediately available in your Cursor environment.
+
 ### Local install
 
 ```bash
