@@ -1,15 +1,28 @@
 {
   "name": "viralnote",
   "displayName": "ViralNote",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Schedule, publish, and analyze social posts across TikTok, Instagram, YouTube, X, Threads, LinkedIn, and more via the ViralNote API.",
   "author": {
     "name": "ViralNote",
-    "url": "https://www.viralnote.app"
+    "url": "https://www.viralnote.app",
+    "email": "hello@viralnote.app"
   },
   "homepage": "https://www.viralnote.app/mcp",
   "repository": "https://github.com/viralnote/mcp-server",
   "license": "MIT",
   "keywords": ["mcp", "social-media", "scheduling", "analytics", "viralnote"],
-  "mcpServers": "./.mcp.json"
+  "logo": "assets/logo.png",
+  "mcpServers": "./.mcp.json",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "VIRALNOTE_API_KEY": {
+        "type": "string",
+        "title": "ViralNote API key",
+        "description": "API key from dashboard.viralnote.app (starts with vnd_). Users set this in Cursor under Plugins → Configure."
+      }
+    },
+    "required": ["VIRALNOTE_API_KEY"]
+  }
 }
