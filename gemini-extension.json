@@ -1,0 +1,13 @@
+{
+  "name": "viralnote",
+  "version": "1.0.0",
+  "description": "Plan, draft, schedule, and publish social posts through your connected ViralNote account.",
+  "mcpServers": {
+    "viralnote": {
+      "httpUrl": "https://dashboard.viralnote.app/api/mcp/mcp",
+      "oauth": {
+        "enabled": true
+      }
+    }
+  }
+}
