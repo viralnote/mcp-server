@@ -8,6 +8,34 @@ Plug it into Claude Desktop, Claude Code, Cursor, or any other MCP-aware host an
 
 ## Install
 
+### Gemini CLI
+
+Install the extension from this repository:
+
+```sh
+gemini extensions install https://github.com/viralnote/mcp-server
+```
+
+Restart Gemini CLI, then run `/mcp auth viralnote` to sign in to your ViralNote
+account and authorize the connection. The extension uses the hosted HTTP server
+with OAuth; no API key or local server build is required. Start with a read such
+as "List my connected social accounts."
+
+### Cline
+
+In Cline's MCP Servers screen, add a remote Streamable HTTP server named
+`viralnote` at `https://dashboard.viralnote.app/api/mcp/mcp`, then complete the
+OAuth sign-in. For the Cline CLI, run:
+
+```sh
+cline mcp install viralnote --transport http https://dashboard.viralnote.app/api/mcp/mcp
+```
+
+The wizard asks for authentication details before saving. See
+[llms-install.md](./llms-install.md) for the setup walkthrough and API-key
+alternative. Keep automatic approval disabled and verify the connection with a
+read before making changes.
+
 ### Claude Desktop / Claude Code / Cursor
 
 Add to your MCP config (`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS, similar on other platforms):
